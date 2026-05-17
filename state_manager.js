@@ -12,6 +12,8 @@ let gamePaused = false;
 
 let gameOver = false;
 
+let bombMode = false;
+
 let gameTime = 300;
 
 let turnTime = 15;
