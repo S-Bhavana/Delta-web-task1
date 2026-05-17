@@ -1,17 +1,15 @@
-# Delta-web-task 1
+# LIVE PAGE
 
-- This is my code for task 1 of delta inductions 2026 (WEB DEELOPMENT)
-- A multiplayer Chain Reaction game built using HTML, CSS, and Vanilla JavaScript.
+# NORMAL MODE
 
- # LIVE PAGE
-- https://s-bhavana.github.io/Delta-web-task1/
- # MODES
- # NORMAL MODE
+# Features:
 
-  - STATUS: completed on May 17th 2026
-  - LINK: https://github.com/S-Bhavana/Delta-web-task1/tree/Normal
-
-# HACKER MODE
-
-- STATUS : Completed on May 17th 2026
-- LINK: https://github.com/S-Bhavana/Delta-web-task1/tree/hacker
+- 6x12 responsive game board
+- Turn-based multiplayer gameplay
+- Explode-on-cap chain reaction mechanics
+- Capture system
+- Game timer and turn timer
+- Pause, resume, and restart controls
+- Move history tracking
+- Winner detection system
+- Mobile responsive UI
