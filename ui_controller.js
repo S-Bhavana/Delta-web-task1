@@ -93,3 +93,4 @@ function renderMoveHistory(){
         historyList.appendChild(li);
     }
 }
+renderMoveHistory();
