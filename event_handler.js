@@ -35,5 +35,5 @@ document
 
     bombMode = true;
 
-    alert("Bomb Activated! Click a cell.");
+    alert("Bomb Activated");
 });
