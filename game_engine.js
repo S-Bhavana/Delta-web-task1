@@ -149,6 +149,17 @@ function activateBomb(row,col){
 }
 function placeOrb(row,col){
 
+    if(bombMode){
+
+    activateBomb(row,col);
+
+    bombMode = false;
+
+    renderBoard();
+
+    return;
+}
+
     if(gamePaused || gameOver){
 
         return;
