@@ -4,7 +4,8 @@ https://s-bhavana.github.io/Delta-web-task1/
 
 # HACKER MODE
 
-STATUS: completed on May 17 
+STATUS: completed on May 17
+
 # Features:
 
 - Bomb powerup
