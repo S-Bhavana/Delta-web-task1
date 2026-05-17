@@ -1,4 +1,5 @@
-function placeOrb(row,col){
+function placeOrb(row,col)
+{
 
     let cell = board[row][col];
 
