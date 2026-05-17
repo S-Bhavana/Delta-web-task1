@@ -224,7 +224,7 @@ function placeOrb(row,col){
     }
 }
 
-   function checkWinner(){
+    function checkWinner(){
 
     let activePlayers = [];
 
@@ -237,6 +237,7 @@ function placeOrb(row,col){
             if(
 
                 owner !== null &&
+
                 !activePlayers.includes(owner)
 
             ){
@@ -272,31 +273,4 @@ function placeOrb(row,col){
     }
 }
 
-    /* IMPORTANT FIX */
-
-    if(moveNumber <= players.length + 1){
-
-        return;
-    }
-
-    if(redExists && !blueExists){
-
-        gameOver = true;
-
-        alert("RED WINS");
-    }
-
-    if(blueExists && !redExists){
-
-        gameOver = true;
-
-        alert("BLUE WINS");
-    }
-
-    if(gameTime <= 0){
-
-        gameOver = true;
-
-        alert("TIME OVER");
-    }
-}
+    
