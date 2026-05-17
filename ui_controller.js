@@ -38,35 +38,9 @@ function renderBoard(){
     "Current Player : " +
     players[currentPlayer].toUpperCase();
 
-    document.getElementById("gameTimer")
-    .innerText =
-    "Game Time : " + gameTime;
-
-    document.getElementById("turnTimer")
-    .innerText =
-    "Turn Time : " + turnTime;
-
     renderMoveHistory();
 }
 
-function renderMoveHistory(){
-
-    let historyList =
-    document.getElementById("moveHistory");
-
-    historyList.innerHTML = "";
-
-    for(let i = moveHistory.length - 1; i >= 0; i--){
-
-        let li = document.createElement("li");
-
-        li.innerText = moveHistory[i];
-
-        historyList.appendChild(li);
-    }
-}
-
-renderBoard();
 function renderMoveHistory(){
 
     let historyList =
@@ -93,4 +67,5 @@ function renderMoveHistory(){
         historyList.appendChild(li);
     }
 }
-renderMoveHistory();
+
+renderBoard();
