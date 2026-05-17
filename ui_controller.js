@@ -4,9 +4,9 @@ function renderBoard(){
 
     boardDiv.innerHTML = "";
 
-    for(let row=0; row<ROWS; row++){
+    for(let row = 0; row < ROWS; row++){
 
-        for(let col=0; col<COLS; col++){
+        for(let col = 0; col < COLS; col++){
 
             let cellData = board[row][col];
 
@@ -35,18 +35,15 @@ function renderBoard(){
 
     document.getElementById("currentPlayer")
     .innerText =
-
     "Current Player : " +
     players[currentPlayer].toUpperCase();
 
     document.getElementById("gameTimer")
     .innerText =
-
     "Game Time : " + gameTime;
 
     document.getElementById("turnTimer")
     .innerText =
-
     "Turn Time : " + turnTime;
 
     renderMoveHistory();
@@ -54,11 +51,12 @@ function renderBoard(){
 
 function renderMoveHistory(){
 
-    let historyList = document.getElementById("moveHistory");
+    let historyList =
+    document.getElementById("moveHistory");
 
     historyList.innerHTML = "";
 
-    for(let i=moveHistory.length-1; i>=0; i--){
+    for(let i = moveHistory.length - 1; i >= 0; i--){
 
         let li = document.createElement("li");
 
