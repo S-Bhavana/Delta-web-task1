@@ -70,7 +70,44 @@ function explode(row,col,player){
         }
     }
 }
+function activateBomb(row,col){
 
+    for(
+
+        let r = row - 1;
+
+        r <= row + 1;
+
+        r++
+
+    ){
+
+        for(
+
+            let c = col - 1;
+
+            c <= col + 1;
+
+            c++
+
+        ){
+
+            if(
+
+                r >= 0 &&
+                r < ROWS &&
+                c >= 0 &&
+                c < COLS
+
+            ){
+
+                board[r][c].count = 0;
+
+                board[r][c].owner = null;
+            }
+        }
+    }
+}
 function placeOrb(row,col){
 
     if(gamePaused || gameOver){
