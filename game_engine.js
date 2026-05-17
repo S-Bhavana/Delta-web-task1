@@ -23,4 +23,5 @@ function placeOrb(row,col){
     currentPlayer %= players.length;
 
     renderBoard();
+    
 }
