@@ -4,6 +4,8 @@ https://s-bhavana.github.io/Delta-web-task1/
 
 # NORMAL MODE
 
+STATUS: completed on May 17th 2026
+
 # Features:
 - 6x12 responsive game board
 - Turn-based multiplayer gameplay
