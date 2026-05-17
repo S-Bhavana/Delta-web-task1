@@ -16,47 +16,24 @@ document
 .getElementById("restartBtn")
 .addEventListener("click",function(){
 
-    currentPlayer = 0;
+    initializeBoard();
 
-    gamePaused = false;
+    currentPlayer = 0;
 
     gameOver = false;
 
-    gameTime = 300;
-
-    turnTime = 15;
-
-    moveNumber = 1;
-
     moveHistory = [];
 
-    initializeBoard();
+    moveNumber = 1;
 
     renderBoard();
 });
 
-setInterval(function(){
+document
+.getElementById("bombBtn")
+.addEventListener("click",function(){
 
-    if(gamePaused || gameOver){
+    bombMode = true;
 
-        return;
-    }
-
-    gameTime--;
-
-    turnTime--;
-
-    if(turnTime <= 0){
-
-        currentPlayer++;
-
-        currentPlayer %= players.length;
-
-        turnTime = 15;
-    }
-
-    checkWinner();
-
-    renderBoard();
-
-},1000);
+    alert("Bomb Activated! Click a cell.");
+});
