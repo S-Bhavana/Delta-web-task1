@@ -2,31 +2,11 @@ const ROWS = 6;
 
 const COLS = 12;
 
-const players = [
-
-    "red",
-    "blue",
-    "green",
-    "yellow"
-];
+const players = ["red","blue"];
 
 let currentPlayer = 0;
 
 let board = [];
-
-let gamePaused = false;
-
-let gameOver = false;
-
-let gameTime = 300;
-
-let turnTime = 15;
-
-let moveNumber = 1;
-
-let moveHistory = [];
-
-let bombMode = false;
 
 function initializeBoard(){
 
@@ -40,9 +20,9 @@ function initializeBoard(){
 
             currentRow.push({
 
-                count : 0,
+                count:0,
 
-                owner : null
+                owner:null
             });
         }
 
