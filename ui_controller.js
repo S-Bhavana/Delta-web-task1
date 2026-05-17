@@ -67,3 +67,29 @@ function renderMoveHistory(){
 }
 
 renderBoard();
+function renderMoveHistory(){
+
+    let historyList =
+    document.getElementById("moveHistory");
+
+    historyList.innerHTML = "";
+
+    for(
+
+        let i = moveHistory.length - 1;
+
+        i >= 0;
+
+        i--
+
+    ){
+
+        let li =
+        document.createElement("li");
+
+        li.innerText =
+        moveHistory[i];
+
+        historyList.appendChild(li);
+    }
+}
