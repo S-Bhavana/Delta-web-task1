@@ -224,27 +224,53 @@ function placeOrb(row,col){
     }
 }
 
-function checkWinner(){
+   function checkWinner(){
 
-    let redExists = false;
-
-    let blueExists = false;
+    let activePlayers = [];
 
     for(let row = 0; row < ROWS; row++){
 
         for(let col = 0; col < COLS; col++){
 
-            if(board[row][col].owner === "red"){
+            let owner = board[row][col].owner;
 
-                redExists = true;
-            }
+            if(
 
-            if(board[row][col].owner === "blue"){
+                owner !== null &&
+                !activePlayers.includes(owner)
 
-                blueExists = true;
+            ){
+
+                activePlayers.push(owner);
             }
         }
     }
+
+    if(moveNumber <= players.length){
+
+        return;
+    }
+
+    if(activePlayers.length === 1){
+
+        gameOver = true;
+
+        alert(
+
+            activePlayers[0].toUpperCase() +
+
+            " WINS"
+
+        );
+    }
+
+    if(gameTime <= 0){
+
+        gameOver = true;
+
+        alert("TIME OVER");
+    }
+}
 
     /* IMPORTANT FIX */
 
