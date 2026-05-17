@@ -9,6 +9,7 @@
  # NORMAL MODE
 
   - STATUS: completed on May 17th 2026
+  - LINK: https://github.com/S-Bhavana/Delta-web-task1/tree/Normal
 
 # HACKER MODE
 
