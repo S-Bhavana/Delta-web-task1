@@ -3,7 +3,7 @@
 - This is my code for task 1 of delta inductions 2026 (WEB DEELOPMENT)
 
  # LIVE PAGE
-
+- https://s-bhavana.github.io/Delta-web-task1/
  # MODES
  # NORMAL MODE
 
