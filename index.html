@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Chain Reaction Game</title>
+    <title>Chain Reaction</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -18,80 +13,13 @@
 
     <h1>CHAIN REACTION GAME</h1>
 
-    <!-- TOP PANEL -->
-
-    <div class="topPanel">
-
-        <div id="currentPlayer">
-
-            Current Player : RED
-
-        </div>
-
-        <div id="gameTimer">
-
-            Game Time : 300
-
-        </div>
-
-        <div id="turnTimer">
-
-            Turn Time : 15
-
-        </div>
-
-    </div>
-
-    <!-- GAME BOARD -->
-
     <div id="board"></div>
-
-    <!-- BUTTONS -->
-
-    <div class="buttons">
-
-        <button id="pauseBtn">
-
-            Pause
-
-        </button>
-
-        <button id="resumeBtn">
-
-            Resume
-
-        </button>
-
-        <button id="restartBtn">
-        
-            Restart
-
-        </button>
-
-        <button id="bombBtn">
-
-            Bomb
-
-        </button>
-          
-
-    </div>
-
-    <!-- MOVE HISTORY -->
-
-    <h2>Move History</h2>
-
-    <ul id="moveHistory"></ul>
-
-    <!-- JAVASCRIPT FILES -->
 
     <script src="state_manager.js"></script>
 
     <script src="game_engine.js"></script>
 
     <script src="ui_controller.js"></script>
-
-    <script src="event_handler.js"></script>
 
 </body>
 
