@@ -2,7 +2,7 @@ const ROWS = 6;
 
 const COLS = 12;
 
-const players = ["red","blue"];
+const players = ["red","blue","green","yellow"];
 
 let currentPlayer = 0;
 
