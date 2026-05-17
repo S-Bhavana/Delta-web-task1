@@ -35,7 +35,9 @@ function renderBoard(){
 
     document.getElementById("currentPlayer")
     .innerText =
+
     "Current Player : " +
+
     players[currentPlayer].toUpperCase();
 
     renderMoveHistory();
@@ -44,6 +46,7 @@ function renderBoard(){
 function renderMoveHistory(){
 
     let historyList =
+
     document.getElementById("moveHistory");
 
     historyList.innerHTML = "";
@@ -58,11 +61,9 @@ function renderMoveHistory(){
 
     ){
 
-        let li =
-        document.createElement("li");
+        let li = document.createElement("li");
 
-        li.innerText =
-        moveHistory[i];
+        li.innerText = moveHistory[i];
 
         historyList.appendChild(li);
     }
