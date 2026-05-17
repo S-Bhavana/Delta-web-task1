@@ -1,6 +1,7 @@
 # Delta-web-task 1
 
 - This is my code for task 1 of delta inductions 2026 (WEB DEELOPMENT)
+- A multiplayer Chain Reaction game built using HTML, CSS, and Vanilla JavaScript.
 
  # LIVE PAGE
 - https://s-bhavana.github.io/Delta-web-task1/
