@@ -224,7 +224,7 @@ function placeOrb(row,col){
     }
 }
 
-    function checkWinner(){
+   function checkWinner(){
 
     let activePlayers = [];
 
@@ -247,10 +247,14 @@ function placeOrb(row,col){
         }
     }
 
+    /* Prevent early win */
+
     if(moveNumber <= players.length){
 
         return;
     }
+
+    /* Only one player left */
 
     if(activePlayers.length === 1){
 
@@ -265,6 +269,8 @@ function placeOrb(row,col){
         );
     }
 
+    /* Timer over */
+
     if(gameTime <= 0){
 
         gameOver = true;
@@ -272,5 +278,3 @@ function placeOrb(row,col){
         alert("TIME OVER");
     }
 }
-
-    
