@@ -1,6 +1,6 @@
 # LIVE PAGE
 
-https://github.com/S-Bhavana/Delta-web-task1/tree/Normal
+https://s-bhavana.github.io/Delta-web-task1/
 
 # NORMAL MODE
 
