@@ -27,45 +27,6 @@ function getCapacity(row,col){
 
 function explode(row,col,player){
 
-    function activateBomb(row,col){
-
-    for(
-
-        let r = row - 1;
-
-        r <= row + 1;
-
-        r++
-
-    ){
-
-        for(
-
-            let c = col - 1;
-
-            c <= col + 1;
-
-            c++
-
-        ){
-
-            if(
-
-                r >= 0 &&
-                r < ROWS &&
-                c >= 0 &&
-                c < COLS
-
-            ){
-
-                board[r][c].count = 0;
-
-                board[r][c].owner = null;
-            }
-        }
-    }
-}
-
     board[row][col].count = 0;
 
     board[row][col].owner = null;
@@ -109,6 +70,7 @@ function explode(row,col,player){
         }
     }
 }
+
 function activateBomb(row,col){
 
     for(
@@ -147,18 +109,19 @@ function activateBomb(row,col){
         }
     }
 }
+
 function placeOrb(row,col){
 
     if(bombMode){
 
-    activateBomb(row,col);
+        activateBomb(row,col);
 
-    bombMode = false;
+        bombMode = false;
 
-    renderBoard();
+        renderBoard();
 
-    return;
-}
+        return;
+    }
 
     if(gamePaused || gameOver){
 
@@ -194,7 +157,6 @@ function placeOrb(row,col){
         "," +
         col +
         ")"
-
     );
 
     moveNumber++;
@@ -212,19 +174,12 @@ function placeOrb(row,col){
 
     checkWinner();
 
-    if(!gameOver){
+    currentPlayer++;
 
-        currentPlayer++;
-
-        currentPlayer %= players.length;
-
-        turnTime = 15;
-
-        renderBoard();
-    }
+    currentPlayer %= players.length;
 }
 
-   function checkWinner(){
+function checkWinner(){
 
     let activePlayers = [];
 
@@ -247,14 +202,10 @@ function placeOrb(row,col){
         }
     }
 
-    /* Prevent early win */
-
     if(moveNumber <= players.length){
 
         return;
     }
-
-    /* Only one player left */
 
     if(activePlayers.length === 1){
 
@@ -265,11 +216,8 @@ function placeOrb(row,col){
             activePlayers[0].toUpperCase() +
 
             " WINS"
-
         );
     }
-
-    /* Timer over */
 
     if(gameTime <= 0){
 
