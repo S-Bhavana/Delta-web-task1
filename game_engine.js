@@ -27,10 +27,6 @@ function getCapacity(row,col){
 
 function explode(row,col,player){
 
-    board[row][col].count = 0;
-
-    board[row][col].owner = null;
-
     let directions = [
 
         [-1,0],
@@ -38,6 +34,14 @@ function explode(row,col,player){
         [0,-1],
         [0,1]
     ];
+
+    /* Empty current cell */
+
+    board[row][col].count = 0;
+
+    board[row][col].owner = null;
+
+    /* Spread to neighbours */
 
     for(let i = 0; i < directions.length; i++){
 
@@ -58,7 +62,7 @@ function explode(row,col,player){
 
             board[newRow][newCol].owner = player;
 
-            /* Recursive explosion */
+            /* Chain reaction */
 
             if(
 
@@ -130,11 +134,11 @@ function placeOrb(row,col){
         return;
     }
 
-    let cell = board[row][col];
-
     let player = players[currentPlayer];
 
-    /* Prevent placing on opponent cell */
+    let cell = board[row][col];
+
+    /* Cannot place on enemy */
 
     if(
 
@@ -152,7 +156,7 @@ function placeOrb(row,col){
 
     cell.owner = player;
 
-    /* Save move */
+    /* Move history */
 
     moveHistory.push(
 
@@ -169,7 +173,7 @@ function placeOrb(row,col){
 
     moveNumber++;
 
-    /* Explode immediately on capacity */
+    /* Immediate explosion */
 
     if(
 
@@ -180,17 +184,17 @@ function placeOrb(row,col){
         explode(row,col,player);
     }
 
-    /* Change player */
+    /* Next player */
 
     currentPlayer++;
 
     currentPlayer %= players.length;
 
-    /* Refresh UI */
+    /* Refresh board */
 
     renderBoard();
 
-    /* Check winner */
+    /* Winner check */
 
     checkWinner();
 }
