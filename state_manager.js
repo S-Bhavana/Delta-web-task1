@@ -62,3 +62,9 @@ function initializeBoard(){
 }
 
 initializeBoard();
+
+const placeSound = new Audio("sounds/place.mp3");
+
+const explodeSound = new Audio("sounds/explode.mp3");
+
+const winSound = new Audio("sounds/win.mp3");
