@@ -41,6 +41,8 @@ function renderBoard(){
     players[currentPlayer].toUpperCase();
 
     renderMoveHistory();
+
+    updateLeaderboard();
 }
 
 function updateLeaderboard(){
