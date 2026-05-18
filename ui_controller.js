@@ -43,6 +43,23 @@ function renderBoard(){
     renderMoveHistory();
 }
 
+function updateLeaderboard(){
+
+    let leaderboard =
+
+    document.getElementById("leaderboard");
+
+    leaderboard.innerHTML =
+
+    "RED : " + scores.red +
+
+    " | BLUE : " + scores.blue +
+
+    " | GREEN : " + scores.green +
+
+    " | YELLOW : " + scores.yellow;
+}
+
 function renderMoveHistory(){
 
     let historyList =
