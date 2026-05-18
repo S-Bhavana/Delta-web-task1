@@ -58,6 +58,8 @@ function explode(row,col,player){
 
             board[newRow][newCol].owner = player;
 
+            /* Recursive explosion */
+
             if(
 
                 board[newRow][newCol].count >=
