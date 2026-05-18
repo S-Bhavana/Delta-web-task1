@@ -27,6 +27,8 @@ function getCapacity(row,col){
 
 function explode(row,col,player){
 
+    explodeSound.play();
+
     let directions = [
 
         [-1,0],
