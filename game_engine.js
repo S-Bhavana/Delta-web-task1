@@ -152,6 +152,8 @@ function placeOrb(row,col){
 
     cell.owner = player;
 
+    placeSound.play();
+
     /* SCORE UPDATE */
 
     scores[player] = scores[player] + 1;
