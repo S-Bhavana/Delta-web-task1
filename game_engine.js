@@ -138,8 +138,6 @@ function placeOrb(row,col){
 
     let cell = board[row][col];
 
-    /* Cannot place on enemy */
-
     if(
 
         cell.owner !== null &&
@@ -150,15 +148,15 @@ function placeOrb(row,col){
         return;
     }
 
-    /* Add orb */
-
     cell.count++;
 
     cell.owner = player;
-    
-    scores[player]++;
 
-    /* Move history */
+    /* SCORE UPDATE */
+
+    scores[player] = scores[player] + 1;
+
+    /* MOVE HISTORY */
 
     moveHistory.push(
 
@@ -175,8 +173,6 @@ function placeOrb(row,col){
 
     moveNumber++;
 
-    /* Immediate explosion */
-
     if(
 
         cell.count >= getCapacity(row,col)
@@ -186,21 +182,14 @@ function placeOrb(row,col){
         explode(row,col,player);
     }
 
-    /* Next player */
-
     currentPlayer++;
 
     currentPlayer %= players.length;
 
-    /* Refresh board */
-
     renderBoard();
 
-    /* Winner check */
-
     checkWinner();
-}
-
+} 
 function checkWinner(){
 
     let activePlayers = [];
