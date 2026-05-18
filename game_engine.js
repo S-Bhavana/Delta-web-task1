@@ -155,6 +155,7 @@ function placeOrb(row,col){
     cell.count++;
 
     cell.owner = player;
+    
     scores[player]++;
 
     /* Move history */
