@@ -26,6 +26,17 @@ let moveNumber = 1;
 
 let moveHistory = [];
 
+let scores = {
+
+    red : 0,
+
+    blue : 0,
+
+    green : 0,
+
+    yellow : 0
+};
+
 let bombMode = false;
 
 function initializeBoard(){
