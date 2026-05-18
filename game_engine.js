@@ -19,6 +19,21 @@ function placeOrb(row,col)
 
     cell.owner = player;
 
+    moveHistory.push(
+
+    "Move " +
+    moveNumber +
+    " : " +
+    player.toUpperCase() +
+    " -> (" +
+    row +
+    "," +
+    col +
+    ")"
+);
+
+    moveNumber++;
+
     currentPlayer++;
 
     currentPlayer %= players.length;
