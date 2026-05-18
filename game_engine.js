@@ -226,6 +226,8 @@ function checkWinner(){
 
         gameOver = true;
 
+        winSound.play();
+
         alert(
 
             activePlayers[0].toUpperCase() +
