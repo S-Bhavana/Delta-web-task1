@@ -87,3 +87,4 @@ function renderMoveHistory(){
 }
 
 renderBoard();
+updateLeaderboard();
