@@ -132,6 +132,8 @@ function placeOrb(row,col){
 
     let player = players[currentPlayer];
 
+    /* Prevent placing on opponent cell */
+
     if(
 
         cell.owner !== null &&
@@ -142,9 +144,13 @@ function placeOrb(row,col){
         return;
     }
 
+    /* Add orb */
+
     cell.count++;
 
     cell.owner = player;
+
+    /* Save move */
 
     moveHistory.push(
 
@@ -161,6 +167,8 @@ function placeOrb(row,col){
 
     moveNumber++;
 
+    /* Explode immediately on capacity */
+
     if(
 
         cell.count >= getCapacity(row,col)
@@ -170,13 +178,19 @@ function placeOrb(row,col){
         explode(row,col,player);
     }
 
-    checkWinner();
+    /* Change player */
 
     currentPlayer++;
 
     currentPlayer %= players.length;
 
+    /* Refresh UI */
+
     renderBoard();
+
+    /* Check winner */
+
+    checkWinner();
 }
 
 function checkWinner(){
